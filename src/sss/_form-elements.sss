@@ -9,7 +9,7 @@
 				margin-right: 16px
 
 	&__submit
-		margin: 24px 0 0
+		margin: 50px 0 0
 
 		&-btn
 			text-align: center
@@ -66,6 +66,39 @@
 	flex-direction: column
 
 	&--2
+		flex-direction: row
+
+		.default-input
+			flex: none
+			align-items: center
+			margin-right: 20px
+
+			&__input
+				&:checked
+					+ .default-input__label
+						&::after
+							content: ''
+							display: block
+							position: absolute calc(50% - 3px) * * 4px
+							background: #FF8A00
+							size: 6px
+							border-radius: 50%
+
+
+			&__label
+				width: auto !important
+				display: flex
+				align-items: center
+				position: relative
+
+				&::before
+					content: ''
+					display: inline-block
+					size: 14px
+					background: #E9E9E9
+					border: 1px solid #CACACA
+					border-radius: 50%
+					margin-right: 5px
 
 		&:first-child
 
@@ -103,15 +136,15 @@ textarea.default-input__input
 				margin-right: 16px
 
 	&__input
-		border: 1px solid var(--border-color)
+		border: 1px solid #E6E6E6
 		border-radius: 5px
-		font-size: em(14)
+		font-size: rem(14)
 		color: inherit #fff
-		size: 100% 53px
+		size: 100% 30px
 		transition: border-color .3s ease
+		background: #FAFAFA
+		padding: 0 20px
 
-		&:not(&--select)
-			padding: 17px 16px
 
 		&:not(.default-input__input--textarea)
 			max-height: 53px
@@ -128,10 +161,10 @@ textarea.default-input__input
 						opacity: 1
 
 		&:focus
-			border-color: var(--main-color)
+			border-color: #FF8A00
 
 		&--select
-			padding: 10px 50px 10px 16px
+			padding: 0 50px 0 20px
 			background-image: url("../img/ico-select-arrow.svg")
 			background-repeat: no-repeat
 			background-position: right 19px center
@@ -164,9 +197,11 @@ textarea.default-input__input
 
 		&--textarea
 			min-width: 100%
+			width: 100% !important
 			max-width: 100%
 			max-height: 40vh
 			min-height: 124px
+			padding: 10px 20px
 
 		&:required
 			
@@ -177,9 +212,10 @@ textarea.default-input__input
 					color: red
 
 	&__label
-		font-size: em(12)
+		font-size: rem(13)
 		color: #919191
 		margin: 0 0 10px
+		color: #565656
 
 		&--file
 			position: absolute -1px

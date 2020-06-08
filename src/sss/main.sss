@@ -8,3 +8,148 @@
 
 @import "base-form.sss"
 @import "my-select.sss"
+
+.ordering
+    margin: 50px 0
+
+    .default-input
+        flex-direction: row-reverse
+        align-items: center
+
+        &__label
+            width: 170px
+            flex: none
+            margin: 0
+            padding-right: 20px
+
+    .btns
+        display: flex
+        justify-content: center
+
+        .default-btn--prev
+            margin-right: 10px
+            border: 1px solid #E2E2E2
+            background: transparent
+            color: #A7A7A7
+
+    .form__inputs, .payments
+        padding-bottom: 60px
+
+        .title
+            margin-bottom: 0
+
+    .form__inputs
+        position: relative
+
+        &:not(:first-of-type)
+            padding-top: 60px
+
+        &:not(:last-child)
+
+            &::after
+                content: ''
+                height: 1px
+                position: absolute * 0 0 50%
+                width: 100vw
+                transform: translate3d(-50%,0,0)
+                background: #F1F1F1
+
+
+        &--2
+            .title
+                grid-column: span 2
+        &--3
+            .title
+                grid-column: span 3
+        &--4
+            .title
+                grid-column: span 4
+
+.strong
+    border: 2px solid #F0F0F0
+    padding: 10px
+    font-size: rem(13)
+    margin-bottom: auto
+
+.column
+
+    &--2
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: 40px
+        padding: 50px 0
+
+        .title
+            grid-column: span 2
+            margin: 0 
+
+        .form__inputs
+            padding: 0 !important
+
+            &::after
+                
+                display: none
+
+.title
+    font-size: 20px
+    line-height: 19px
+    margin-bottom: 40px
+
+.text
+    margin-bottom: 10px
+
+.payments
+    &__list
+        display: flex
+        flex-wrap: wrap
+        margin: 0 0 -15px -15px
+
+    &__item
+        position: relative
+        display: flex
+        align-items: center
+        margin: 0 0 15px 15px
+        border: 1px solid #E6E6E6
+        border-radius: 3px
+        padding: 30px
+        width: calc((100% - 15px * 3) / 3)
+        cursor: pointer
+
+        input:checked
+            + .payments__item-text
+                &::after
+                    content: ''
+                    display: block
+                    position: absolute calc(50% - 3px) * * 4px
+                    background: #FF8A00
+                    size: 6px
+                    border-radius: 50%
+                    
+        &-text
+            display: flex
+            align-items: center
+            position: relative
+            margin-right: 20px
+            font-size: 13px
+
+            &::before
+                content: ''
+                size: 14px
+                display: block
+                border-radius: 50%
+                background: #E9E9E9
+                border: 1px solid #cacaca
+                flex: none
+                margin-right: 10px
+        
+        span
+            flex: none
+            margin-left: auto
+    
+
+
+
+
+
+
+

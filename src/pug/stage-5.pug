@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Шаг 5
+		include inc/head.pug
+		include inc/css.pug
+	body.main.loading
+		include inc/header.pug
+		main#content
+			.ordering(data-stage="5")
+				.wrapper
+					.title Введите личные данные
+					form(action="")
+						.form__inputs.form__inputs--2
+							.title Кто заказывает
+							.form__inputs-input
+								.default-input
+									input.default-input__input(type="text"  required)
+									label.default-input__label Ф.И.О.
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+							.form__inputs-input
+								.default-input
+									input.default-input__input(type="text"  required)
+									label.default-input__label Номер и серия паспорта
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+							.form__inputs-input
+								.default-input
+									input.default-input__input(type="text"  required)
+									label.default-input__label Кем выдан
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+						
+							.form__inputs-input
+								.default-input
+									input.default-input__input(type="text" required)
+									label.default-input__label Дата выдачи
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+						.form__inputs.form__inputs--2
+							.title Кому заказывают
+							.form__inputs-input
+								.default-input
+									input.default-input__input(type="text"  required)
+									label.default-input__label Ф.И.О.
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+							.form__inputs-input
+								.default-input
+									input.default-input__input(type="text"  required)
+									label.default-input__label Дата рождения пациента
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+							.form__inputs-input
+								.default-input
+									input.default-input__input(type="text"  required)
+									label.default-input__label СНИЛС
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+
+						.form__inputs.form__inputs--2
+							.title Тот, кому вы заказываете обувь, старше 14 лет?
+							.form__inputs-input.form__inputs-input--2
+								.default-input
+									input(type="radio" id="22" name="22" hidden).default-input__input.default-input__input--radio
+									label(for="22").default-input__label Да
+										.error-text
+											<!-- текст ошибки -->
+								.default-input
+									input(type="radio" id="23" name="22" hidden).default-input__input.default-input__input--radio
+									label(for="23").default-input__label Нет
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+								
+							.form__inputs-input
+								.default-input
+									input.default-input__input(type="text"  required)
+									label.default-input__label Номер и серия паспорта
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+							.form__inputs-input
+								.default-input
+									input.default-input__input(type="text"  required)
+									label.default-input__label Кем выдан
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+							.form__inputs-input
+								.default-input
+									input.default-input__input(type="text"  required)
+									label.default-input__label Дата выдачи
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+						.column.column--2
+							.title Информация о направлении
+							.form__inputs
+								.form__inputs-input
+									.default-input
+										input.default-input__input(type="text"  required)
+										label.default-input__label Ф.И.О.
+										.default-input__error
+											.error-text
+												<!-- текст ошибки -->
+								.form__inputs-input
+									.default-input
+										input.default-input__input(type="text"  required)
+										label.default-input__label Дата направления
+										.default-input__error
+											.error-text
+												<!-- текст ошибки -->
+								.form__inputs-input
+									.default-input
+										input.default-input__input(type="text"  required)
+										label.default-input__label Номер направления
+										.default-input__error
+											.error-text
+												<!-- текст ошибки -->
+									.checkbox
+										input(type="checkbox" id="33"  required)
+										label(for="33") Уведомление (приглашение на обеспечение)
+										.default-input__error
+											.error-text
+												<!-- текст ошибки -->
+								.form__inputs-input
+									.default-input
+										select.default-input__input.default-input__input--select(required)
+											option(value="1") 1
+											option(value="2") 2
+										label.default-input__label Управление ФСС
+										.default-input__error
+											.error-text
+												<!-- текст ошибки -->
+												<!-- текст ошибки -->
+								.form__inputs-input
+									.default-input
+										input.default-input__input(type="text"  required)
+										label.default-input__label Количесство пар обуви
+										.default-input__error
+											.error-text
+												<!-- текст ошибки -->
+							.strong
+								b ВАЖНО!
+								p Максимальный заказ 4 пары:
+								ul
+									li 2 на утепленной подкладке: 1 пара зима и/или - 1-2 пара осень
+									li - 2 без утепленной подкладки: 1 пара с закрытым носком и/или 1-2 пары с открытым носком
+
+						.form__inputs
+							.title Дополнительные назначения в ИПР:
+							.form__inputs-input
+								.default-input
+									textarea.default-input__input.default-input__input--textarea(type="text"  required)
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+							
+
+
+					.btns
+						a.default-btn.default-btn--prev Назад
+						a.default-btn.default-btn--next Далее
+					
+		include inc/footer.pug
+		include inc/scripts.pug

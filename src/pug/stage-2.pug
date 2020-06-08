@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Шаг 2
+		include inc/head.pug
+		include inc/css.pug
+	body.main.loading
+		include inc/header.pug
+		main#content
+			.ordering(data-stage="2")
+				.wrapper
+					.title Выберите форму оплаты
+					.payments
+						form(action="")
+							.payments__list
+								label.payments__item(for="1")
+									input(type="radio" id="1" name="1" hidden)
+									.payments__item-text Самоятоятельно
+									span
+										img(src="img/payment-1.svg")
+								label.payments__item(for="2")
+									input(type="radio" id="2" name="1" hidden) 
+									.payments__item-text На возмещение по соц. программам
+									span
+										img(src="img/payment-2.svg")
+								label.payments__item(for="3")
+									input(type="radio" id="3" name="1" hidden) 
+									.payments__item-text Направление фонда социального страхования
+									span
+										img(src="img/payment-3.svg")
+
+
+
+					.btns
+						a.default-btn.default-btn--prev Назад
+						a.default-btn.default-btn--next Далее
+					
+		include inc/footer.pug
+		include inc/scripts.pug

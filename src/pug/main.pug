@@ -2,47 +2,48 @@
 html(lang="ru")
 	head
 		meta(charset="utf-8")
-		title Главная
+		title Шаг 1
 		include inc/head.pug
 		include inc/css.pug
 	body.main.loading
 		include inc/header.pug
 		main#content
-			.wrapper
-				.title Заполните данные плательщика
-				.form__inputs.form__inputs--2
-					.form__inputs-input
-						.default-input
-							input.default-input__input(type="text"  required)
-							label.default-input__label Ф.И.О.
-							.default-input__error
-								.error-text
-									<!-- текст ошибки -->
-					.form__inputs-input
-						.default-input
-							input.default-input__input(type="text"  required)
-							label.default-input__label E-Mail
-							.default-input__error
-								.error-text
-									<!-- текст ошибки -->
-					.form__inputs-input
-						.default-input
-							input.default-input__input(type="text"  required)
-							label.default-input__label Адрес регистрации
-							.default-input__error
-								.error-text
-									<!-- текст ошибки -->
-				
-					.form__inputs-input
-						.default-input
-							input.default-input__input(type="tel" required)
-							label.default-input__label Номер телефоны
-							.default-input__error
-								.error-text
-									<!-- текст ошибки -->
-				.form__submit
-					.form__submit-btn
-						input.default-btn(type="submit" value="Далее")
+			.ordering(data-stage="1")
+				.wrapper
+					.title Заполните данные плательщика
+					form(action="")
+						.form__inputs.form__inputs--2
+							.form__inputs-input
+								.default-input
+									input.default-input__input(type="text"  required)
+									label.default-input__label Ф.И.О.
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+							.form__inputs-input
+								.default-input
+									input.default-input__input(type="text"  required)
+									label.default-input__label E-Mail
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+							.form__inputs-input
+								.default-input
+									input.default-input__input(type="text"  required)
+									label.default-input__label Адрес регистрации
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+						
+							.form__inputs-input
+								.default-input
+									input.default-input__input(type="tel" required)
+									label.default-input__label Номер телефоны
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+					.btns
+						a.default-btn.default-btn--next Далее
 					
 		include inc/footer.pug
 		include inc/scripts.pug

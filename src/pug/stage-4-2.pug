@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Шаг 4-2
+		include inc/head.pug
+		include inc/css.pug
+	body.main.loading
+		include inc/header.pug
+		main#content
+			.ordering(data-stage="4")
+				.wrapper
+					.title Введите личные данные
+					form(action="")
+						.form__inputs.form__inputs--2
+							.title Кто заказывает
+							.form__inputs-input
+								.default-input
+									input.default-input__input(type="text"  required)
+									label.default-input__label Ф.И.О.
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+							.form__inputs-input
+								.default-input
+									input.default-input__input(type="text"  required)
+									label.default-input__label Номер и серия паспорта
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+							.form__inputs-input
+								.default-input
+									input.default-input__input(type="text"  required)
+									label.default-input__label Кем выдан
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+						
+							.form__inputs-input
+								.default-input
+									input.default-input__input(type="text" required)
+									label.default-input__label Дата выдачи
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+						.form__inputs.form__inputs--2
+							.title Кому заказывают
+							.form__inputs-input
+								.default-input
+									input.default-input__input(type="text"  required)
+									label.default-input__label Ф.И.О.
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+							.form__inputs-input
+								.default-input
+									input.default-input__input(type="text"  required)
+									label.default-input__label Дата рождения пациента
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+							.form__inputs-input
+								.default-input
+									input.default-input__input(type="text"  required)
+									label.default-input__label СНИЛС
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+
+						.form__inputs.form__inputs--2
+							.title Тот, кому вы заказываете обувь, старше 14 лет?
+							.form__inputs-input.form__inputs-input--2
+								.default-input
+									input(type="radio" id="22" name="22" hidden).default-input__input.default-input__input--radio
+									label(for="22").default-input__label Да
+										.error-text
+											<!-- текст ошибки -->
+								.default-input
+									input(type="radio" id="23" name="22" hidden).default-input__input.default-input__input--radio
+									label(for="23").default-input__label Нет
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+								
+							.form__inputs-input
+								.default-input
+									input.default-input__input(type="text"  required)
+									label.default-input__label Свидетельство о рождении ребенка
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+							
+						
+						  
+
+					.btns
+						a.default-btn.default-btn--prev Назад
+						a.default-btn.default-btn--next Далее
+					
+		include inc/footer.pug
+		include inc/scripts.pug
