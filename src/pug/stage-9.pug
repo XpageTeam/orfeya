@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Шаг 9
+		include inc/head.pug
+		include inc/css.pug
+	body.main.loading
+		include inc/header.pug
+		main#content
+			.ordering(data-stage="9")
+				.wrapper
+					.title Выбор модели
+					form(action="")
+						.form__inputs.form__inputs--2
+							.form__inputs-input
+								.default-input
+									select.default-input__input.default-input__input--select(required)
+										option(value="1") 1
+									label.default-input__label Выберите припуск по длинне
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+						
+						<!-- это каталог с сайта, бери разметку на сайте в каталоге-->
+						.catalog-section.tile
+							.title Выберите модель
+							.clatalog-section-wrapper.uni_parent_col
+								- for (let i = 0; i < 12; i++)
+									.product.uni_col.uni-25
+										.product-wrapper
+											.image-normalizer
+											.information-normalizer
+											.shadow.hover_shadow
+												.shadow-wrapper
+													.marks
+													.image
+														a.image-wrapper.uni-image(href='')
+															.uni-aligner-vertical
+															img(src='img/photos/2.jpg')
+														.uni-button-quickview
+															i Быстрый просмотр
+													.information
+														.brand
+														a.name(href='') Ортоп.малослож.антиварус.обувь ОрФЕЯ
+														.price.SKUProductPrice от 3 520 руб.
+														.original.SKUProductPriceOld 3 520 руб.
+													.hideable
+														.button-buy.SKUBuyButton
+															a.uni-button.solid_button.button(href='')  Подробнее 
+
+
+
+							
+								
+					
+
+					.btns
+						a.default-btn.default-btn--prev Назад
+						a.default-btn.default-btn--next Далее
+					
+		include inc/footer.pug
+		include inc/scripts.pug

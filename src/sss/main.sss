@@ -9,6 +9,8 @@
 @import "base-form.sss"
 @import "my-select.sss"
 
+@import "_catalog-old.sss"
+
 .ordering
     margin: 50px 0
 
@@ -32,7 +34,7 @@
             background: transparent
             color: #A7A7A7
 
-    .form__inputs, .payments
+    .form__inputs
         padding-bottom: 60px
 
         .title
@@ -98,7 +100,7 @@
 .text
     margin-bottom: 10px
 
-.payments
+.radio
     &__list
         display: flex
         flex-wrap: wrap
@@ -108,15 +110,15 @@
         position: relative
         display: flex
         align-items: center
-        margin: 0 0 15px 15px
+        // margin: 0 0 15px 15px
         border: 1px solid #E6E6E6
         border-radius: 3px
         padding: 30px
-        width: calc((100% - 15px * 3) / 3)
+        // width: calc((100% - 15px * 3) / 3)
         cursor: pointer
 
         input:checked
-            + .payments__item-text
+            + .radio__item-text
                 &::after
                     content: ''
                     display: block
@@ -149,7 +151,126 @@
 
 
 
+.address
+    position: relative
+    padding-top: 50px
+
+    &::before
+        content: ''
+        display: block
+        width: 100vw
+        height: 1px
+        background: #F1F1F1
+        position: absolute 0 * * 50%
+        transform: translate3d(-50%,0,0)
 
 
 
+    &__list
+        display: flex
+        flex-wrap: wrap
+        margin: 0 0 -50px -110px
+
+    &__item
+        width: calc((100% - 110px * 3) / 3)
+        margin: 0 0 50px 110px
+        display: flex
+
+        &-img
+            flex: none
+            margin-right: 20px
+
+        &-title
+            font-size: 14px
+            line-height: 15px
+
+            color: #FF8A00
+            margin-bottom: 20px
+
+        &-text
+            font-size: 14px
+            line-height: 121.2%
+            color: #6E6E6E
+
+        &-email
+            font-size: 14px
+            line-height: 121.2%
+            text-decoration-line: underline
+
+            color: #6E6E6E
+            margin-top: 5px
+
+
+.delivery-method
+    position: relative
+    padding-top: 50px
+    margin-bottom: 50px
+
+    &::before
+        content: ''
+        display: block
+        width: 100vw
+        height: 1px
+        background: #F1F1F1
+        position: absolute 0 * * 50%
+        transform: translate3d(-50%,0,0)
+
+.map
+    margin: 45px 0 60px
+
+.img_title_wrap
+    display: inline-block
+    vertical-align: middle
+    margin-right: 31px
+    width: 180px
+
+.field_wrap.title_img .field_val_wrap
+    display: inline-block
+    vertical-align: middle
+    width: 223px
+    margin-bottom: 0
+
+.field_wrap.title_img .field_val
+    width: 65px
+    letter-spacing: 2px
+    text-align: center
+    padding: 11px
+    margin-right: 19px
+
+input.field_val
+    border: 1px solid #bebebe
+    border-radius: 4px
+    font-size: 14px
+    padding: 12px
+    line-height: 1
+    box-sizing: border-box
+
+.field_wrap.title_img .delemiter
+    height: 19px
+
+.form__inputs + .catalog-section
+    margin-top: 60px
+
+.input-file__label
+    position: relative
+    size: 180px
+    display: block
+    font-size: 0
+    background-color: #FAFAFA
+    background-image: url('../img/photos/ico-photo.svg')
+    background-position: center
+    background-repeat: no-repeat
+    border: 1px solid #E6E6E6
+    border-radius: 3px
+
+    &::after
+        content: 'Загрузить фото'
+        font-size: 13px
+        line-height: 121.2%
+        color: #565656
+        position: absolute * 0 30px 0
+        text-align: center
+
+.input-file__name
+    border: 0
 

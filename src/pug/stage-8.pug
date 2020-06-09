@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Шаг 8
+		include inc/head.pug
+		include inc/css.pug
+	body.main.loading
+		include inc/header.pug
+		main#content
+			.ordering(data-stage="7")
+				.wrapper
+					.title Выберите тип обуви
+					form(action="")
+						.form__inputs.form__inputs--2
+							- for (let i = 0; i < 6; i++)
+								.field_wrap.required.title_img
+									.img_title_wrap
+										img.img_title(src='img/photos/param1.png', alt='Длинна стопы')
+									.field_val_wrap
+										input.field_val(type='text', name='LENGTH_FOOT[]', maxlength='3', value='')
+										span.info_val Левая нога
+										.delemiter
+										input.field_val(type='text', name='LENGTH_FOOT[]', maxlength='3', value='')
+										span.info_val Правая нога
+								
+					
+
+					.btns
+						a.default-btn.default-btn--prev Назад
+						a.default-btn.default-btn--next Далее
+					
+		include inc/footer.pug
+		include inc/scripts.pug

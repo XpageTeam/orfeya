@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Шаг 6-2
+		include inc/head.pug
+		include inc/css.pug
+	body.main.loading
+		include inc/header.pug
+		main#content
+			.ordering(data-stage="6")
+				.wrapper
+					.title Выберите способ получения 
+					form(action="")
+						.form__inputs
+							.form__inputs-input.form__inputs-input--2
+								.default-input
+									input(type="radio" id="34" name="35" hidden).default-input__input.default-input__input--radio
+									label(for="34").default-input__label Получение в центре продаж
+										.error-text
+											<!-- текст ошибки -->
+								.default-input
+									input(type="radio" id="35" name="35" hidden).default-input__input.default-input__input--radio
+									label(for="35").default-input__label Доставка на дом
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+							.form__inputs-input.form__inputs-input--2
+								.checkbox
+									input(type="checkbox" id="1").checkbox__input
+									label.checkbox__label(for="1") Адрес доставки совпадает с адресом регистрации
+							.form__inputs-input
+								.default-input
+									input.default-input__input(type="text"  required)
+									label.default-input__label Адрес 
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+								
+					.delivery-method
+						.title Способ доставки
+						<!-- Если коротко - данный блок уже есть на сайте https://orfeya.ru/personal/order/make/ поэтому я вставил картинку-->
+						img(src="img/photos/delivery.jpg", alt="")
+
+						
+
+
+
+					.btns
+						a.default-btn.default-btn--prev Назад
+						a.default-btn.default-btn--next Далее
+					
+		include inc/footer.pug
+		include inc/scripts.pug

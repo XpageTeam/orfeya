@@ -1,18 +1,36 @@
 .popup
-	border-radius: 10px
-	padding: 30px 40px 40px !important
-	width: 430px
+	padding: 35px 30px !important
+	width: 330px
 	max-width: 100%
 
-	&#add-user
-		width: 469px
-
 	&__title
-		text-align: center
-		font-size: em(20)
-		line-height: calc(24 / 20)
+		font-size: rem(21)
 		color: #212121
-		margin: 0 0 30px
+		margin-bottom: 5px
+
+	&__text
+		font-size: 13px
+
+	&__btn
+
+		margin-top: 25px
+		display: flex
+		flex-direction: column
+
+		.default-btn
+			&:not(:first-child)
+				margin-top: 10px
+
+	&.final
+		.popup__btn
+			align-items: center
+
+		.default-btn
+			width: 204px
+			max-width: 100%
+			text-align: center
+			justify-content: center
+
 
 .captcha
 	display: flex

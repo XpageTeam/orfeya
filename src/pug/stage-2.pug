@@ -13,20 +13,20 @@ html(lang="ru")
 					.title Выберите форму оплаты
 					.payments
 						form(action="")
-							.payments__list
-								label.payments__item(for="1")
+							.form__inputs.form__inputs--3
+								label.radio__item(for="1")
 									input(type="radio" id="1" name="1" hidden)
-									.payments__item-text Самоятоятельно
+									.radio__item-text Самоятоятельно
 									span
 										img(src="img/payment-1.svg")
-								label.payments__item(for="2")
+								label.radio__item(for="2")
 									input(type="radio" id="2" name="1" hidden) 
-									.payments__item-text На возмещение по соц. программам
+									.radio__item-text На возмещение по соц. программам
 									span
 										img(src="img/payment-2.svg")
-								label.payments__item(for="3")
+								label.radio__item(for="3")
 									input(type="radio" id="3" name="1" hidden) 
-									.payments__item-text Направление фонда социального страхования
+									.radio__item-text Направление фонда социального страхования
 									span
 										img(src="img/payment-3.svg")
 

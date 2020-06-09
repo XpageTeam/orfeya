@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Шаг 7
+		include inc/head.pug
+		include inc/css.pug
+	body.main.loading
+		include inc/header.pug
+		main#content
+			.ordering(data-stage="7")
+				.wrapper
+					.title Выберите тип обуви
+					form(action="")
+						.form__inputs.form__inputs--4
+							label.radio__item(for="1")
+								input(type="radio" id="1" name="1" hidden)
+								.radio__item-text Сандали с открытым носком
+							   
+							label.radio__item(for="2")
+								input(type="radio" id="2" name="1" hidden) 
+								.radio__item-text Ботинки мех, шерсть
+								
+							label.radio__item(for="3")
+								input(type="radio" id="3" name="1" hidden) 
+								.radio__item-text Сандали с закрытым носком
+
+							label.radio__item(for="3")
+								input(type="radio" id="3" name="1" hidden) 
+								.radio__item-text Ботинки байка
+							  
+								
+					
+
+					.btns
+						a.default-btn.default-btn--prev Назад
+						a.default-btn.default-btn--next Далее
+					
+		include inc/footer.pug
+		include inc/scripts.pug

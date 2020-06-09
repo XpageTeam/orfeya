@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Шаг 10
+		include inc/head.pug
+		include inc/css.pug
+	body.main.loading
+		include inc/header.pug
+		main#content
+			.ordering(data-stage="10")
+				.wrapper
+					.title Выбор модели
+					form(action="")
+						.form__inputs.form__inputs--2
+							.form__inputs-input
+								.default-input
+									select.default-input__input.default-input__input--select(required)
+										option(value="1") 1
+									label.default-input__label Выберите припуск по длинне
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+						.form__inputs.form__inputs--2
+							.form__inputs-input
+								.text Рекомендации врача
+								.default-input
+									textarea.default-input__input.default-input__input--textarea(required)
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+							.form__inputs-input
+								.text Описание стопы
+								.default-input
+									textarea.default-input__input.default-input__input--textarea(required)
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+							
+						.form__inputs.form__inputs--2
+							.title Укороченные ноги
+							.field_wrap.required.title_img
+								.img_title_wrap
+									img.img_title(src='img/photos/param1.png', alt='Длинна стопы')
+								.field_val_wrap
+									input.field_val(type='text', name='LENGTH_FOOT[]', maxlength='3', value='')
+									span.info_val Левая нога
+									.delemiter
+									input.field_val(type='text', name='LENGTH_FOOT[]', maxlength='3', value='')
+									span.info_val Правая нога
+						.form__inputs
+							.title Фотографии
+							.info Вы можете загрузить фотографии  в состоянии стоя ноги вместе в ракурсах “спереди ” и “сзади”
+
+							.input-file
+								input(type="file" id="55" multiple name="files[]" required="required" title="Необходимо выбрать минимум один файл" hidden).input-file__file
+								label(for="55").input-file__label
+								input(type="text").input-file__name
+					
+						
+					
+
+
+							
+								
+					
+
+					.btns
+						a.default-btn.default-btn--prev Назад
+						a.default-btn.default-btn--next Далее
+					
+		include inc/footer.pug
+		include inc/scripts.pug

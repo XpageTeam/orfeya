@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Шаг 6
+		include inc/head.pug
+		include inc/css.pug
+	body.main.loading
+		include inc/header.pug
+		main#content
+			.ordering(data-stage="6")
+				.wrapper
+					.title Выберите способ получения 
+					form(action="")
+						.form__inputs
+							.form__inputs-input.form__inputs-input--2
+								.default-input
+									input(type="radio" id="34" name="35" hidden).default-input__input.default-input__input--radio
+									label(for="34").default-input__label Получение в центре продаж
+										.error-text
+											<!-- текст ошибки -->
+								.default-input
+									input(type="radio" id="35" name="35" hidden).default-input__input.default-input__input--radio
+									label(for="35").default-input__label Доставка на дом
+									.default-input__error
+										.error-text
+											<!-- текст ошибки -->
+					.address
+						.title Выберите центр продаж
+						.address__list
+							.address__item
+								.address__item-img
+									img(src="img/photos/address-1.jpg")
+								.address__item-info
+									.address__item-title Северный тракт 9А
+									.address__item-text Тел. Единая справочная служба: 
+										a(href="tel: 88003014375") 8 800 301 43 75
+									.address__item-email
+										a(href="mailto:promo@orfeya.ru") promo@orfeya.ru
+							.address__item
+								.address__item-img
+									img(src="img/photos/address-2.jpg")
+								.address__item-info
+									.address__item-title Аптечная 6А
+									.address__item-text Тел. Единая справочная служба: 
+										a(href="tel: 88003014375") 8 800 301 43 75
+									.address__item-email
+										a(href="mailto:promo@orfeya.ru") promo@orfeya.ru
+							.address__item
+								.address__item-img
+									img(src="img/photos/address-3.jpg")
+								.address__item-info
+									.address__item-title Луначарского 57
+									.address__item-text Тел. Единая справочная служба: 
+										a(href="tel: 88003014375") 8 800 301 43 75
+									.address__item-email
+										a(href="mailto:promo@orfeya.ru") promo@orfeya.ru
+
+					.map
+						#map
+							<!--карту сюда-->
+							img(src="img/photos/map.jpg")
+
+
+					.btns
+						a.default-btn.default-btn--prev Назад
+						a.default-btn.default-btn--next Далее
+					
+		include inc/footer.pug
+		include inc/scripts.pug

@@ -17,3 +17,23 @@ document.addEventListener("DOMContentLoaded", function(){
 		transitionEffect: "slide",
 	});
 });
+
+
+const inputs = document.querySelectorAll(".input-file__file");
+
+for (const input of inputs){
+
+	input.addEventListener("change", function() {
+		let files = [];
+		console.log(files)
+		const textInput = this.closest(".input-file")
+							.querySelector(".input-file__name");
+		for (let i = 0; i < input.files.length; i++)
+			files.push(input.files[i].name)
+		if (!files.length)
+			textInput.value = ""
+		else{
+			textInput.value = files.join(",     ")
+		}
+	})
+}
